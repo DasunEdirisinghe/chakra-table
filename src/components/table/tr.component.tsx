@@ -4,14 +4,14 @@ import {
 import {FaEllipsisH} from "react-icons/fa";
 import React from 'react';
 
-const TrComponent = ({item, columns, onSelected}) => {
+const TrComponent = ({item, columns, onSelected}: any) => {
 
-    function selectedRow(row) {
+    function selectedRow(row: any) {
         onSelected(row)
     }
 
     return (<Tr>
-        {columns.map((col, index) => <Td onClick={!col.options ? () => selectedRow(item) : null} key={index}>
+        {columns.map((col: any, index: any) => <Td onClick={!col.options ? () => selectedRow(item) : () => {}} key={index}>
             {col.condition ? <Badge
                     colorScheme={col.condition[item[columns[index].accessor]]}>{item[columns[index].accessor]}</Badge> :
                 <Text>{item[columns[index].accessor]}</Text>}
@@ -23,7 +23,7 @@ const TrComponent = ({item, columns, onSelected}) => {
                             <FaEllipsisH/>
                         </MenuButton>
                         <MenuList>
-                            {col.options.map((actionItem, index) => <MenuItem onClick={() => {
+                            {col.options.map((actionItem: any, index: any) => <MenuItem onClick={() => {
                                 actionItem.action(item)
                             }} key={index}>{actionItem.label}</MenuItem>)}
                         </MenuList>
