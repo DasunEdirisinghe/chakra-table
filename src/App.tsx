@@ -86,8 +86,8 @@ export const App = () => {
       <ChakraProvider theme={theme}>
         <Box w={"100%"} h={"100vh"} bg={"blackAlpha.200"} d={"flex"} justifyContent={"center"} alignItems={"center"}>
           <Box w={800} bg={"white"} p={5} borderRadius={5}>
-            <TableComponent onSelected={(x: any) => {
-              console.log(x, "APP")}} columns={COLUMN} data={data}/>
+            <TableComponent onSelected={(line: any) => {
+              console.log(line, "LINE")}} columns={COLUMN} data={data}/>
           </Box>
         </Box>
       </ChakraProvider>

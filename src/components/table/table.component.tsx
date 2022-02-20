@@ -31,7 +31,7 @@ interface IActions {
 interface IProps {
     columns: Array<INormal | IMedium | IActions>,
     data: Array<{ [key: string | number]: string | number }>,
-    onSelected: ({}: { [key: string | number]: string | number }) => void
+    onSelected: (line: { [key: string | number]: string | number }) => void
 }
 
 
