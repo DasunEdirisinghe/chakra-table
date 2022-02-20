@@ -29,7 +29,7 @@ interface IActions {
 
 interface IProps {
     columns : Array<INormal | IMedium | IActions>,
-    data: any,
+    data: Array<{[key: string | number] : string | number}>,
     onSelected: any
 }
 
