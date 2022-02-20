@@ -35,20 +35,19 @@ export const App = () => {
       options: [
         {
           label: "Profile",
-          action: function(rowItem: any) {
-            console.log(rowItem)
+          action: function(line: any) {
           }
         },
         {
           label: "Payments",
-          action: function(rowItem: any) {
-            console.log(rowItem)
+          action: function(line: any) {
+            console.log(line)
           }
         },
         {
           label: "Block",
-          action: function(rowItem: any) {
-            console.log(rowItem)
+          action: function(line: any) {
+            console.log(line)
           }
         },
       ]

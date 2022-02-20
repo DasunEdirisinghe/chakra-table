@@ -8,7 +8,7 @@ interface INormal {
 }
 
 interface conditionMap {
-    [key: string | number] : string | number
+    [key: string | number]: string | number
 }
 
 
@@ -20,6 +20,7 @@ interface IMedium {
 
 interface IActionProps {
     label: string | number,
+    action: (line: { [key: string | number]: string | number }) => void
 }
 
 interface IActions {
@@ -28,15 +29,13 @@ interface IActions {
 }
 
 interface IProps {
-    columns : Array<INormal | IMedium | IActions>,
-    data: Array<{[key: string | number] : string | number}>,
-    onSelected: any
+    columns: Array<INormal | IMedium | IActions>,
+    data: Array<{ [key: string | number]: string | number }>,
+    onSelected: ({}: { [key: string | number]: string | number }) => void
 }
 
 
-
-const TableComponent = ({columns, data, onSelected} : IProps) => {
-
+const TableComponent = ({columns, data, onSelected}: IProps) => {
     function selectedRow(row: any) {
         onSelected(row)
     }
