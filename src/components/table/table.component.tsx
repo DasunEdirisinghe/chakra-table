@@ -11,7 +11,6 @@ interface conditionMap {
     [key: string | number]: string | number
 }
 
-
 interface IMedium {
     header: string | number,
     accessor: string | number,
